@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import ZeroWasteApp from './ZeroWasteApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ZeroWasteApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
