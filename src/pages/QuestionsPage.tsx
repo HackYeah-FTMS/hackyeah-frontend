@@ -24,24 +24,36 @@ const QuestionsPage = () => {
 
   return (
     <BaseContainer>
-      <BorderBox>
-        <div>{questions[questionNumber]}</div>
+      <DefinedHeightBorderBox>
+        <Question>{questions[questionNumber]}</Question>
         <ButtonBox>
-          <StyledButton onClick={nextQuestion}>Tak</StyledButton>
+          <StyledButton size="large" onClick={nextQuestion}>Tak</StyledButton>
           <PaddingDiv />
-          <StyledButton onClick={nextQuestion}>Nie</StyledButton>
+          <StyledButton size="large" onClick={nextQuestion}>Nie</StyledButton>
         </ButtonBox>
-      </BorderBox>
+      </DefinedHeightBorderBox>
     </BaseContainer>
   );
 };
+
+const DefinedHeightBorderBox = styled(BorderBox)`
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const PaddingDiv = styled.div.attrs(() => ({}))`
   padding-right: 30px;
 `;
+
 const ButtonBox = styled.div.attrs(() => ({}))`
   display: flex;
-  padding-top: 25px;
   justify-content: center;
+`;
+
+const Question = styled.div.attrs(() => ({}))`
+  text-align: center;
 `;
 
 const StyledButton = withStyles({
