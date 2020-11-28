@@ -39,6 +39,7 @@ const FlexBorderBox = styled(BorderBox)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: white;
 `;
 
 const Image = styled.img.attrs(() => ({}))`
@@ -47,12 +48,13 @@ const Image = styled.img.attrs(() => ({}))`
 `
 const UpperText = styled.div.attrs(() => ({}))`
   text-align: center;
-  color: white;
+  color: #1A81B3;
   padding-bottom: 15px;
+  font-size: 20px;
 `;
 const BottomText = styled.div.attrs(() => ({}))`
   text-align: center;
-  color: white;
+  color: #1A81B3;
   padding-top: 15px;
   text-transform: uppercase;
   font-weight: bold;
