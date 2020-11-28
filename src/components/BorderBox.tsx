@@ -7,6 +7,7 @@ const BorderBox = styled.div.attrs(() => ({}))`
   padding: 30px;
   border-radius: 25px;
   width: 75%;
+  font-family: "Raleway";
 `;
 
 export default BorderBox;

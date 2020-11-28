@@ -40,7 +40,6 @@ const WelcomeText = styled.div.attrs(() => ({}))`
   text-align: center;
   color: white;
   padding-bottom: 75px;
-  font-weight: bold;
 `;
 
 const StyledButton = withStyles({
