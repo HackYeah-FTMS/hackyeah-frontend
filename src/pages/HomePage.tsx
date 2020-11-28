@@ -3,11 +3,13 @@ import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
+import BorderBox from "../components/BorderBox";
+import BaseContainer from "../components/BaseContainer";
 
 const HomePage = () => {
   const history = useHistory();
   return (
-    <HomePageContainer>
+    <BaseContainer>
       <BorderBox>
         <WelcomeText>
           <Text>
@@ -21,9 +23,11 @@ const HomePage = () => {
             Odpowiedz na kilka pytań, a powiemy Ci co powinieneś zrobić! :)
           </Text>
         </WelcomeText>
-        <StyledButton onClick={()  => history.push("/questions")}>Zaczynamy!</StyledButton>
+        <StyledButton onClick={() => history.push("/questions")}>
+          Zaczynamy!
+        </StyledButton>
       </BorderBox>
-    </HomePageContainer>
+    </BaseContainer>
   );
 };
 
@@ -37,22 +41,6 @@ const WelcomeText = styled.div.attrs(() => ({}))`
   color: white;
   padding-bottom: 75px;
   font-weight: bold;
-`;
-
-const HomePageContainer = styled.div.attrs(() => ({}))`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-const BorderBox = styled.div.attrs(() => ({}))`
-  display: flex;
-  flex-direction: column;
-  background-color: #FF6A00;
-  padding: 30px;
-  border-radius: 25px;
 `;
 
 const StyledButton = withStyles({
