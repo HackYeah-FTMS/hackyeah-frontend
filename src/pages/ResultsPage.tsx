@@ -35,7 +35,6 @@ const ResultsPage = () => {
           <ArrowBackIosIcon fontSize="large" style={{color: "#1A81B3"}}/>
           <AgainText>
             Jeszcze raz
-            {/*<div>Jeszcze raz</div>*/}
           </AgainText>
         </GoBackSection>
         <UpperText>Wyrzuć "śmieci" tutaj:</UpperText>
