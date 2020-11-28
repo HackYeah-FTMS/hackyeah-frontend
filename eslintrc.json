@@ -1,0 +1,21 @@
+{
+  "extends": "./node_modules/gts/",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "React": "readonly"
+  },
+  "rules": {
+    "react/jsx-curly-brace-presence": [
+      1,
+      {
+        "props": "never",
+        "children": "never"
+      }
+    ]
+  },
+  "plugins": [
+    "react"
+  ]
+}
