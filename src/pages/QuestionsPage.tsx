@@ -27,9 +27,29 @@ const QuestionsPage = () => {
       <DefinedHeightBorderBox>
         <Question>{questions[questionNumber]}</Question>
         <ButtonBox>
-          <StyledButton size="large" onClick={nextQuestion}>Tak</StyledButton>
+          <Button
+            style={{
+              background: "white",
+              color: "#ff6a00",
+              fontWeight: "bold",
+            }}
+            size="large"
+            onClick={nextQuestion}
+          >
+            Tak
+          </Button>
           <PaddingDiv />
-          <StyledButton size="large" onClick={nextQuestion}>Nie</StyledButton>
+          <Button
+            style={{
+              background: "white",
+              color: "#ff6a00",
+              fontWeight: "bold",
+            }}
+            size="large"
+            onClick={nextQuestion}
+          >
+            Nie
+          </Button>
         </ButtonBox>
       </DefinedHeightBorderBox>
     </BaseContainer>
@@ -54,16 +74,8 @@ const ButtonBox = styled.div.attrs(() => ({}))`
 
 const Question = styled.div.attrs(() => ({}))`
   text-align: center;
+  color: white;
+  font-size: 17px;
 `;
-
-const StyledButton = withStyles({
-  root: {
-    background: "red",
-    color: "white",
-  },
-  label: {
-    textTransform: "capitalize",
-  },
-})(Button);
 
 export default QuestionsPage;
