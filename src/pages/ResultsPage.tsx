@@ -3,33 +3,21 @@ import BaseContainer from "../components/BaseContainer";
 import BorderBox from "../components/BorderBox";
 import styled from "styled-components";
 
+import yellow from '../assets/images/yellow.png';
+import grey from '../assets/images/grey.png';
+import brown from '../assets/images/brown.png';
+import blue from '../assets/images/blue.png';
+import green from '../assets/images/green.png';
+
 const ResultsPage = () => {
   const getImagesPerType = () => {
-    let map: Map<String, String> = new Map<String, String>();
-    map.set(
-      "Metal",
-      "https://ehokery.pl/zdjecia/2020/02/19/942/33/Pojemnik_na_odpady_120L_kosz___zoltys.jpg"
-    );
-    map.set(
-      "Tworzywa sztuczne",
-      "https://ehokery.pl/zdjecia/2020/02/19/942/33/Pojemnik_na_odpady_120L_kosz___zoltys.jpg"
-    );
-    map.set(
-      "Odpady zmieszane",
-      "https://ehokery.pl/zdjecia/2020/02/19/951/51/Pojemnik_na_odpady_120L_kosz___czarnys.jpg"
-    );
-    map.set(
-      "Odpady organiczne",
-      "https://ehokery.pl/zdjecia/2020/02/19/953/44/Pojemnik_na_odpady_120L_kosz___brazowys.jpg"
-    );
-    map.set(
-      "Papier",
-      "https://ehokery.pl/zdjecia/2020/02/19/946/02/Pojemnik_na_odpady_120L_kosz___niebieskis.jpg"
-    );
-    map.set(
-      "Szkło",
-      "https://ehokery.pl/zdjecia/2020/02/19/944/14/Pojemnik_na_odpady_120L_kosz__zielonys.jpg"
-    );
+    let map: Map<String, any> = new Map<String, any>();
+    map.set("Metal", yellow);
+    map.set("Tworzywa sztuczne", yellow);
+    map.set("Odpady zmieszane", grey);
+    map.set("Odpady organiczne", brown);
+    map.set("Papier", blue);
+    map.set("Szkło", green);
     return map;
   };
 
@@ -39,15 +27,25 @@ const ResultsPage = () => {
 
   return (
     <BaseContainer>
-      <BorderBox>
+      <FlexBorderBox>
         <UpperText>Wyrzuć "śmieci" tutaj:</UpperText>
-        <img src={garbageUrl as string} />
+        <Image src={garbageUrl} />
         <BottomText>{garbageType}</BottomText>
-      </BorderBox>
+      </FlexBorderBox>
     </BaseContainer>
   );
 };
-const UpperText =  styled.div.attrs(() => ({}))`
+const FlexBorderBox = styled(BorderBox)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Image = styled.img.attrs(() => ({}))`
+  width:140px;
+  height:210px;
+`
+const UpperText = styled.div.attrs(() => ({}))`
   text-align: center;
   color: white;
   padding-bottom: 15px;
@@ -56,7 +54,7 @@ const BottomText = styled.div.attrs(() => ({}))`
   text-align: center;
   color: white;
   padding-top: 15px;
-  text-transform : uppercase;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
 `;
