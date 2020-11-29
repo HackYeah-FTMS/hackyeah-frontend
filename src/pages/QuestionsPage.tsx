@@ -142,7 +142,7 @@ const QuestionsPage = () => {
           <Button
             style={{
               background: "white",
-              color: "#ff6a00",
+              color: "#FF941D",
               fontWeight: "bold",
             }}
             size="large"
@@ -154,7 +154,7 @@ const QuestionsPage = () => {
           <Button
             style={{
               background: "white",
-              color: "#ff6a00",
+              color: "#FF941D",
               fontWeight: "bold",
             }}
             size="large"

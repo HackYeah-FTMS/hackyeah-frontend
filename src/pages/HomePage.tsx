@@ -25,7 +25,7 @@ const HomePage = () => {
         <Button
           style={{
             background: "white",
-            color: "#ff6a00",
+            color: "#FF941D",
             fontWeight: "bold"
           }}
           onClick={() => history.push("/questions")}
