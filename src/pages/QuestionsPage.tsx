@@ -8,12 +8,12 @@ import styled from "styled-components";
 const QuestionsPage = () => {
   const generalQuestions = () => {
     let map: Map<String, Array<any>> = new Map<String, Array<any>>();
-    map.set("Czy jest to przedmiot papierowy?", ["PAPER", "GLASS"]);
-    map.set("Czy przedmiot jest wykonany ze szkła?", ["GLASS", "BIO"]);
-    map.set("Czy jest to odpad bio?", ["BIO", "METAL_PLASTIC"]);
+    map.set("Czy jest to przedmiot papierowy?", ["PAPER", "GENERAL"]);
+    map.set("Czy przedmiot jest wykonany ze szkła?", ["GLASS", "GENERAL"]);
+    map.set("Czy jest to odpad bio?", ["BIO", "GENERAL"]);
     map.set("Czy jest to tworzywo sztuczne bądź metal?", [
       "METAL_PLASTIC",
-      "OTHERS",
+      "END_OTHERS",
     ]);
     return map;
   };
